@@ -1,9 +1,15 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { makeServer } from "./mirage/index";
+import User from "./components/User";
 
-function App() {
-  return <div className="App">User Profile</div>;
-}
+makeServer();
+
+const App = () => {
+  return (
+    <div className="App">
+      <User />
+    </div>
+  );
+};
 
 export default App;
